@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Percentage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Percentage Calculator</h1>
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'calc1')">What is % of ?</button>
+            <button class="tab-link" onclick="openTab(event, 'calc2')">X is what % of Y?</button>
+            <button class="tab-link" onclick="openTab(event, 'calc3')">Increase/Decrease</button>
+        </div>
+
+        <div id="calc1" class="tab-content active">
+            <h2>Calculate a Percentage of a Number</h2>
+            <div class="input-group">
+                <input type="number" id="percent-in" placeholder="Enter percentage">
+                <label for="percent-in">% of</label>
+                <input type="number" id="num-in" placeholder="Enter number">
+            </div>
+            <button onclick="calculate1()">Calculate</button>
+            <p class="result" id="result1"></p>
+        </div>
+
+        <div id="calc2" class="tab-content">
+            <h2>Calculate "X is what percent of Y"</h2>
+            <div class="input-group">
+                <input type="number" id="x-in" placeholder="Enter X">
+                <label for="x-in">is what percent of</label>
+                <input type="number" id="y-in" placeholder="Enter Y">
+            </div>
+            <button onclick="calculate2()">Calculate</button>
+            <p class="result" id="result2"></p>
+        </div>
+
+        <div id="calc3" class="tab-content">
+            <h2>Calculate Percentage Increase/Decrease</h2>
+            <div class="input-group">
+                 <label for="from-in">From</label>
+                <input type="number" id="from-in" placeholder="Initial Value">
+                <label for="to-in">to</label>
+                <input type="number" id="to-in" placeholder="Final Value">
+            </div>
+            <button onclick="calculate3()">Calculate</button>
+            <p class="result" id="result3"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
